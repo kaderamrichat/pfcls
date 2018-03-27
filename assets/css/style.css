@@ -1,0 +1,76 @@
+*{
+  box-sizing: border-box;
+}
+
+
+.wrapper {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.title{
+  font-family: verdana;
+
+}
+
+.output{
+  padding: 20px;
+  text-align: center;
+}
+
+.player{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  cursor: pointer;
+  width: 100px;
+  height: 130px;
+  border:1px solid grey;
+  border-radius:4px;
+  margin: 10px;
+}
+
+.card img{
+  width: 70px;
+  margin-top: 25px;
+}
+
+#pierre-p1{
+  background: url(../img/rock.png) center center no-repeat;
+  background-size: 80px 80px;
+}
+#feuille-p1{
+  background: url(../img/paper.png) center center no-repeat;
+  background-size: 80px 80px;
+}
+#ciseaux-p1{
+  background: url(../img/scissors.png) center center no-repeat;
+  background-size: 80px 80px;
+}
+#lezard-p1{
+  background: url(../img/lizard.png) center center no-repeat;
+  background-size: 80px 80px;
+}
+#spock-p1{
+  background: url(../img/spock.png) center center no-repeat;
+  background-size: 80px 80px;
+}
+
+.player01{
+  border:1px solid red;
+  transition-duration: 0.5s;
+  perspective: 600px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  background:#fff;
+}
+
+.player01:hover{
+  transform:rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}

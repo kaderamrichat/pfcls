@@ -59,8 +59,6 @@ const init = function(){
        compare(choice01, choice02);
      }
    };
-
-
 };
 
 //Récupérer la valeur du btn joueur 01 et la stocker dans une variable
@@ -95,10 +93,10 @@ const display = (choice, output, num) => {
 const compare = function(choice01, choice02){
   console.log(list);
   if(list[choice01].hasOwnProperty(choice02)){
-    _("result").innerHTML = "Player 01 Win <br> " + choice01 + " " + list[choice01][choice02] + " " + choice02 ;
+    _("result").innerHTML = "Joueur 01 gagne !!! <br> " + choice01 + " " + list[choice01][choice02] + " " + choice02 ;
     console.log("Player01 Win !!!!");
   } else {
-    _("result").innerHTML = "Player 02 Win";
+    _("result").innerHTML = "Joueur 02 gagne";
     console.log("Player02 Win !!!!");
   }
 };
