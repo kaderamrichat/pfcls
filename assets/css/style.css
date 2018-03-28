@@ -42,7 +42,7 @@ hr{
 
 
 header{
-  height: 200px;
+  height: 170px;
 }
 
 
@@ -194,7 +194,7 @@ header{
 
 /* Partie interactions */
 .msg-choice{
-  font-size: 20px;
+  font-size: 15px;
   color:#f7a83e;
 
 
@@ -215,11 +215,27 @@ header{
 }
 
 
-/*######## MOBILE ################*/
+/*############################ MOBILE ################*/
 @media screen and (max-width:415px){
   .wrapper{
     width: 100%;
     height: auto;
+  }
+
+  header {
+    height: 45px;
+  }
+
+  header img{
+    display: none;
+  }
+
+  header p {
+    font-size: 10px;
+  }
+
+  header p:last-child{
+    display: none;
   }
 
   .title{
@@ -237,15 +253,26 @@ header{
     width: 98%;
   }
 
+  .subtitle .numero {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
   .playerbox{
-    width: 380px;
+    width: 98%;
+    padding: 20px;
+  }
+
+  .player01{
+    margin-bottom: 5px;
   }
 
   .card{
-    width: 50px;
-    height: 60px;
-    margin: 2px;
-    //background-size: 50px 50px;
+    width: 60px;
+    height: 40px;
+    margin: 2px 7px 2px 7px;
+    background-size: 40px 40px;
   }
 
   .card:hover, .card:focus{
@@ -261,7 +288,7 @@ header{
 
   #result{
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .explication{
