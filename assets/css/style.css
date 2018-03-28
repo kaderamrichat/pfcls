@@ -1,76 +1,330 @@
+@font-face {
+  font-family: Supercell;
+  src: url(../font/Supercell.ttf);
+}
+
 *{
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
+
+body{
+  font-family: Supercell;
+  color:#555055;
+  font-size: 12px;
+  background-color: rgb(92,150,150);
+}
+
+.debug{
+  border:1px solid red;
+}
+
+hr{
+  height: 1px;
+  background-color: #ccc;
+  width: 70%;
+  border : 0;
+  margin: 20px auto;
+
+}
 
 .wrapper {
-  width: 70%;
+  width: 90%;
+  height: 100%;
   text-align: center;
   margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 1px 1px 15px rgba(12,12,12,0.2);
 }
 
+
+header{
+  height: 200px;
+}
+
+
+/* ######## Titres ###############*/
 .title{
-  font-family: verdana;
+    font-family: Supercell;
+    color:#555055;
+}
+
+.subtitle{
+  display: inline-block;
+  width: 750px;
+  text-align: left;
+  font-family: Supercell;
+  color:#555055;
 
 }
 
-.output{
-  padding: 20px;
+.subtitle .numero{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: rgb(197,147,118);
+  box-shadow: 1px 1px 1px rgba(80,80,80, 0.2);
+  color:#FFF;
+}
+
+.rules{
+
+  font-size: 11px;
+  width: 50%;
+  margin: 15px auto;
+  color : #999999;
+}
+
+.rules li{
+  list-style-position: inside;
+  margin-bottom: 12px;
   text-align: center;
 }
 
-.player{
+
+.playerbox{
+  width: 750px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap:wrap;
+}
+
+.player01{
+  margin-bottom: 30px;
+}
+
+
+.card:hover{
+  background-color: #FDD84e;
+}
+
+
+/*####### images de fond des cartes ############################*/
+.pierre{
+  background: url(../img/rock.png) center center no-repeat;
+
+}
+.feuille{
+  background: url(../img/paper.png) center center no-repeat;
+
+}
+.ciseaux{
+  background: url(../img/scissors.png) center center no-repeat;
+
+}
+.lezard{
+  background: url(../img/lizard.png) center center no-repeat;
+
+}
+.spock{
+  background: url(../img/spock.png) center center no-repeat;
+
 }
 
 .card{
   cursor: pointer;
-  width: 100px;
+  min-width: 100px;
   height: 130px;
-  border:1px solid grey;
   border-radius:4px;
-  margin: 10px;
-}
-
-.card img{
-  width: 70px;
-  margin-top: 25px;
-}
-
-#pierre-p1{
-  background: url(../img/rock.png) center center no-repeat;
-  background-size: 80px 80px;
-}
-#feuille-p1{
-  background: url(../img/paper.png) center center no-repeat;
-  background-size: 80px 80px;
-}
-#ciseaux-p1{
-  background: url(../img/scissors.png) center center no-repeat;
-  background-size: 80px 80px;
-}
-#lezard-p1{
-  background: url(../img/lizard.png) center center no-repeat;
-  background-size: 80px 80px;
-}
-#spock-p1{
-  background: url(../img/spock.png) center center no-repeat;
+  margin: 20px;
+  transition: 0.5s ease;
+  outline: none;
+  background-color: rgb(90,148,148);
   background-size: 80px 80px;
 }
 
-.player01{
-  border:1px solid red;
-  transition-duration: 0.5s;
-  perspective: 600px;
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
-  background:#fff;
+
+.btn{
+  width: 170px;
+  height: 60px;
+  outline:none;
+  border:0;
+  font-size: 20px;
+  font-family: Supercell;
+  margin: 12px;
+  transition: 0.4s ease;
 }
 
-.player01:hover{
-  transform:rotateY(180deg);
-  -webkit-transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
+.btn-submit {
+  color:#555055;
+  background-color: #FDD84e;
+  border-bottom:4px solid #f7a83e;
+}
+
+.btn-submit:hover{
+  background-color: #f7a83e;
+}
+
+.btn-reset {
+  color:#fff;
+  background-color: #e74c3c;
+  border-bottom:4px solid #c0392b;
+}
+
+.btn-reset:hover{
+  background-color: #c0392b;
+}
+
+.output{
+  padding: 20px;
+  font-size: 22px;
+  text-align: center;
+}
+
+#result{
+  height: 100px;
+  padding-top: 30px;
+  width: 70%;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  margin: 15px auto;
+}
+
+.explication{
+  display: block;
+  font-size: 16px;
+}
+
+/* Partie interactions */
+.msg-choice{
+  font-size: 20px;
+  color:#f7a83e;
+
+
+  animation-name: fadeout;
+  animation-duration: 2s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+
+/*######## MOBILE ################*/
+@media screen and (max-width:415px){
+  .wrapper{
+    width: 100%;
+    height: auto;
+  }
+
+  .title{
+    font-size: 22px;
+  }
+
+  .rules{
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .subtitle{
+    margin-top: 35px;
+    font-size: 12px;
+    width: 98%;
+  }
+
+  .playerbox{
+    width: 380px;
+  }
+
+  .card{
+    width: 50px;
+    height: 60px;
+    margin: 2px;
+    //background-size: 50px 50px;
+  }
+
+  .card:hover, .card:focus{
+    background-color: rgb(90,148,148);
+  }
+
+
+  .btn{
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+  }
+
+  #result{
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .explication{
+    font-size: 12px;
+  }
+
+
+}
+
+
+/* ##### TABLETTES ######### */
+@media screen and (min-width:416px) and (max-width: 1024px){
+
+  .wrapper{
+    width: 100%;
+    height: auto;
+  }
+
+  .title{
+    font-size: 22px;
+  }
+
+  .rules{
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .subtitle{
+    margin-top: 35px;
+    font-size: 14px;
+    width: 98%;
+  }
+
+  .playerbox{
+    width: 600px;
+  }
+
+  .card{
+    width: 60px;
+    height: 110px;
+    margin: 5px;
+    background-size: 50px 50px;
+  }
+
+  .card:hover, .card:focus{
+    background-color: rgb(90,148,148);
+  }
+
+
+  .btn{
+    width: 160px;
+    height: 60px;
+    font-size: 16px;
+  }
+
+  #result{
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .explication{
+    font-size: 12px;
+  }
+
+
 }

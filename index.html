@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/font/fontawesome/webfonts/css/fontawesome-all.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/app.js"></script>
   <title>PFCLS</title>
@@ -11,33 +12,56 @@
 <body>
 
 <div class="wrapper">
-  <h1 class="title">Faites vos jeux !</h1>
-  <section class="player01">
-    <h2 class="title">Joueur 1</h2>
-    <div class="player">
-      <button id="pierre-p1" class="card" value="pierre"></button>
-      <button id="feuille-p1" class="card" value="feuille"></button>
-      <button id="ciseaux-p1" class="card" value="ciseaux"></button>
-      <button id="lezard-p1" class="card" value="lezard"></button>
-      <button id="spock-p1" class="card" value="spock"></button>
-    </div>
-    <div id="output-player01" class="output"></div>
-  </section>
+<header>
+  <img src="assets/img/logoBBT.png" alt="Big Bang Theory">
+  <h1 class="title"> \\\ P.F.C.L.S /// </h1>
+    <p>(Pierre - Feuille - Ciseaux - Lézard - Spock)</p>
+    <p>Bon jeu !</p>
+</header>
+<section class="player01">
+  <h2 class="subtitle">
+    <i class="far fa-user-circle"></i> Joueur 1 : <span class="numero" id="scoreJ1">0</span>
+    <span id="output-player01" class="output"></span>
+  </h2>
 
-
-  <h2 class="title">Joueur 2</h2>
-  <div class="player">
-    <button id="pierre-p2" value="pierre">Pierre</button>
-    <button id="feuille-p2" value="feuille">Feuille</button>
-    <button id="ciseaux-p2" value="ciseaux">Ciseaux</button>
-    <button id="lezard-p2" value="lezard">Lézard</button>
-    <button id="spock-p2" value="spock">Spock</button>
-    <div id="output-player02" class="output"></div>
+  <div class="playerbox">
+    <button class="card card-p1 pierre" value="pierre"></button>
+    <button class="card card-p1 feuille" value="feuille"></button>
+    <button class="card card-p1 ciseaux" value="ciseaux"></button>
+    <button class="card card-p1 lezard" value="lezard"></button>
+    <button class="card card-p1 spock" value="spock"></button>
   </div>
+</section>
 
+<section class="player02">
+  <h2 class="subtitle">
+    <i class="far fa-user-circle"></i> Joueur 2 : <span class="numero" id="scoreJ2">0</span>
+    <span id="output-player02" class="output"></span>
+  </h2>
+  <div class="playerbox">
+    <button class="card card-p2 pierre" value="pierre"></button>
+    <button class="card card-p2 feuille" value="feuille"></button>
+    <button class="card card-p2 ciseaux" value="ciseaux"></button>
+    <button class="card card-p2 lezard" value="lezard"></button>
+    <button class="card card-p2 spock" value="spock"></button>
+  </div>
+</section>
 
-  <button id="get-result" value="result">Résultat</button>
+<section class="results">
+  <button id="get-result" class="btn btn-submit" value="result">Résultat</button>
+  <button id="reset" class="btn btn-reset" value="result">Reset</button>
   <div id="result" class="output">
+</section>
+
+<footer>
+  <hr>
+  <p>Les règles de ce jeu inspiré par la sérié télévisée "The Big Bang Theory" sont simplissimes :</p>
+  <ol class="rules">
+      <li>Le joueur 1 choisi une carte sans que l'autre regrade</li>
+      <li>Le joueur 2 choisi une carte sans que l'autre regrade</li>
+      <li>On clicque sur résultat pour voir qui gagne</li>
+  </ol>
+</footer>
 
   </div>
 
